@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{HuaweiCloud fog provider gem}
   spec.description   = %q{HuaweiCloud fog provider gem.}
-  spec.homepage      = "https://github.com/fog/fog-huaweicloud"
+  spec.homepage      = "https://github.com/zhongjun2/fog-huaweicloud"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
