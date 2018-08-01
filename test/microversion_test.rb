@@ -32,7 +32,7 @@ describe "when microversion" do
   end
 
   class TestMicroVersion
-    include Fog::HuaweiCloud::Core
+    include Fog::OpenStack::Core
     public :headers
   end
 end

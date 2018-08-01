@@ -4,7 +4,7 @@ module Minitest
       class_variable_get(:@@network)
     end
 
-    class_variable_set(:@@network, Fog::Network[:huaweicloud])
+    class_variable_set(:@@network, Fog::Network[:openstack])
   end
 end
 

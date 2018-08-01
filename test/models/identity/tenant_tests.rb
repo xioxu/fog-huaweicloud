@@ -1,8 +1,8 @@
 require "test_helper"
 
-describe "Fog::Identity[:huaweicloud] | tenant" do
+describe "Fog::Identity[:openstack] | tenant" do
   before do
-    @identity = Fog::Identity[:huaweicloud]
+    @identity = Fog::Identity[:openstack]
   end
 
   describe "success" do

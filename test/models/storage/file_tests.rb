@@ -29,9 +29,9 @@ unless Fog.mocking?
     :key => "fogfilestests-#{rand(65536)}"
   }
 
-  @directory = Fog::Storage[:huaweicloud].directories.create(directory_attributes)
+  @directory = Fog::Storage[:openstack].directories.create(directory_attributes)
 
-  describe "Fog::HuaweiCloud::Storage | file" do
+  describe "Fog::OpenStack::Storage | file" do
     after do
       @directory.destroy
     end

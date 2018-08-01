@@ -1,15 +1,15 @@
 require "test_helper"
 require 'fog/core'
 
-describe "Fog::Orchestration[:huaweicloud] | stack requests" do
+describe "Fog::Orchestration[:openstack] | stack requests" do
   before do
     @oldcwd = Dir.pwd
     Dir.chdir("test/requests/orchestration")
     @base_url = "file://" + File.absolute_path(".")
 
-    @orchestration = Fog::Orchestration[:huaweicloud]
+    @orchestration = Fog::Orchestration[:openstack]
 
-    @stack_mock = Fog::Orchestration::HuaweiCloud::Stack.new(
+    @stack_mock = Fog::Orchestration::OpenStack::Stack.new(
       :template_name => "stack_mock",
       :id            => "stack_id"
     )

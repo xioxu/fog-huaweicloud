@@ -1,8 +1,8 @@
 require "test_helper"
 
-describe "Fog::Identity[:huaweicloud] | users" do
+describe "Fog::Identity[:openstack] | users" do
   before do
-    @identity = Fog::Identity[:huaweicloud]
+    @identity = Fog::Identity[:openstack]
     tenant_id = @identity.list_tenants.body['tenants'].first['id']
     @instance = @identity.users.create(
       :name      => 'foobar',
@@ -33,24 +33,24 @@ describe "Fog::Identity[:huaweicloud] | users" do
     it "#find_by_id" do
       unless Fog.mocking?
         proc do
-          Fog::Identity[:huaweicloud].users.find_by_id('fake')
-        end.must_raise(Fog::Identity::HuaweiCloud::NotFound)
+          Fog::Identity[:openstack].users.find_by_id('fake')
+        end.must_raise(Fog::Identity::OpenStack::NotFound)
       end
     end
 
     it "#find_by_name" do
       unless Fog.mocking?
         proc do
-          Fog::Identity[:huaweicloud].users.find_by_name('fake')
-        end.must_raise(Fog::Identity::HuaweiCloud::NotFound)
+          Fog::Identity[:openstack].users.find_by_name('fake')
+        end.must_raise(Fog::Identity::OpenStack::NotFound)
       end
     end
 
     it "#destroy" do
       unless Fog.mocking?
         proc do
-          Fog::Identity[:huaweicloud].users.destroy('fake')
-        end.must_raise(Fog::Identity::HuaweiCloud::NotFound)
+          Fog::Identity[:openstack].users.destroy('fake')
+        end.must_raise(Fog::Identity::OpenStack::NotFound)
       end
     end
   end

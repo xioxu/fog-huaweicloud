@@ -1,8 +1,8 @@
 require "test_helper"
 
-describe "Fog::Compute[:huaweicloud] | tenants" do
+describe "Fog::Compute[:openstack] | tenants" do
   before do
-    @identity = Fog::Identity[:huaweicloud]
+    @identity = Fog::Identity[:openstack]
     @instance = @identity.tenants.create(:name => 'test')
   end
 
@@ -22,7 +22,7 @@ describe "Fog::Compute[:huaweicloud] | tenants" do
       unless Fog.mocking?
         proc do
           @identity.tenants.find_by_id('fake')
-        end.must_raise(Fog::Identity::HuaweiCloud::NotFound)
+        end.must_raise(Fog::Identity::OpenStack::NotFound)
       end
     end
 
@@ -30,7 +30,7 @@ describe "Fog::Compute[:huaweicloud] | tenants" do
       unless Fog.mocking?
         proc do
           @identity.tenants.destroy('fake')
-        end.must_raise(Fog::Identity::HuaweiCloud::NotFound)
+        end.must_raise(Fog::Identity::OpenStack::NotFound)
       end
     end
   end

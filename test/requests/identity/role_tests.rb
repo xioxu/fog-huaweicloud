@@ -1,8 +1,8 @@
 require "test_helper"
 
-describe "Fog::Identity[:huaweicloud] | role requests" do
+describe "Fog::Identity[:openstack] | role requests" do
   before do
-    @identity = Fog::Identity[:huaweicloud]
+    @identity = Fog::Identity[:openstack]
 
     @role_format = {
       'id'   => String,

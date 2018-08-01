@@ -1,5 +1,5 @@
 def set_nfv_data
-  @nfv = Fog::NFV::HuaweiCloud.new
+  @nfv = Fog::NFV::OpenStack.new
 
   @vnfd_data = {
     :attributes    => {

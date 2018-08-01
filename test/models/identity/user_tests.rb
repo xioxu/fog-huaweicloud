@@ -1,8 +1,8 @@
 require "test_helper"
 
-describe "Fog::Identity[:huaweicloud] | user" do
+describe "Fog::Identity[:openstack] | user" do
   before do
-    @identity = Fog::Identity[:huaweicloud]
+    @identity = Fog::Identity[:openstack]
     @tenant_id = @identity.list_tenants.body['tenants'].first['id']
     @instance = @identity.users.new(
       :name      => 'User Name',

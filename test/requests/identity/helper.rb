@@ -1,4 +1,4 @@
-class HuaweiCloud
+class OpenStack
   module Identity
     def self.get_tenant_id(identity)
       ENV['OPENSTACK_TENANT_NAME'] || identity.list_tenants.body['tenants'].first['id']

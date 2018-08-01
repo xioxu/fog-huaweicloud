@@ -1,8 +1,8 @@
 require "test_helper"
 
-describe "Fog::SharedFileSystem::HuaweiCloud | quota requests" do
+describe "Fog::SharedFileSystem::OpenStack | quota requests" do
   before do
-    @manila = Fog::SharedFileSystem::HuaweiCloud.new
+    @manila = Fog::SharedFileSystem::OpenStack.new
 
     @project_id = @manila.respond_to?(:current_tenant) ? @manila.current_tenant['id'] : Fog::Mock.random_numbers(6).to_s
 

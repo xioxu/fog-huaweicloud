@@ -1,8 +1,8 @@
 require "test_helper"
 
-describe "Fog::Metering[:huaweicloud] | event requests" do
+describe "Fog::Metering[:openstack] | event requests" do
   before do
-    @metering = Fog::Metering[:huaweicloud]
+    @metering = Fog::Metering[:openstack]
     @event_format = {
       'message_id' => String,
       'event_type' => String

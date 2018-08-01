@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe "Fog::Compute[:huaweicloud] | volume requests" do
+describe "Fog::Compute[:openstack] | volume requests" do
   before do
     @volume_format = {
       'id'                 => String,
@@ -16,7 +16,7 @@ describe "Fog::Compute[:huaweicloud] | volume requests" do
       'metadata'           => Hash
     }
 
-    @compute = Fog::Compute[:huaweicloud]
+    @compute = Fog::Compute[:openstack]
     @volume = @compute.create_volume('loud', 'this is a loud volume', 3).body
   end
 
