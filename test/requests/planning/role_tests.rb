@@ -1,6 +1,7 @@
 require "test_helper"
+require 'fog/planning/huaweicloud'
 
-describe "Fog::OpenStack[:planning] | Planning role requests" do
+describe "Fog::HuaweiCloud[:planning] | Planning role requests" do
   before do
     @role_format = {
       'description' => Fog::Nullable::String,
@@ -12,7 +13,7 @@ describe "Fog::OpenStack[:planning] | Planning role requests" do
 
   describe "success" do
     it "#list_roles" do
-      Fog::OpenStack[:planning].list_roles.body.must_match_schema([@role_format])
+      Fog::HuaweiCloud[:planning].list_roles.body.must_match_schema([@role_format])
     end
   end
 end
